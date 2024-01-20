@@ -29,7 +29,7 @@ flutter:
 
   uses-material-design: true
   assets:
-    - assets/logos/
+      - assets/logos/
       - assets/icons/brands/
       - assets/images/content/
       - assets/images/banners/
