@@ -4,7 +4,6 @@ import 'package:ecommerce/features/authentication/screens/login/widgets/login_he
 
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/constants/text_strings.dart';
-import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 
@@ -16,29 +15,28 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         child: Padding(
           padding: TSpacingStyle.paddingWithAppBarHeight,
           child: Column(
             children: [
               ///Logo Title & subtitle
-              TLoginHeader(dark: dark),
+              TLoginHeader(),
 
               ///Form
 
-              const TLoginForm(),
+              TLoginForm(),
 
               ///Divider
 
-              TFormDivider(dark: dark,dividerText: TTexts.orSignInWith),
+              TFormDivider(dividerText: TTexts.orSignInWith),
 
-              const SizedBox(height: TSizes.spaceBtwSections),
+              SizedBox(height: TSizes.spaceBtwSections),
 
               ///Footer
 
-              const TSocialButtons()
+              TSocialButtons()
             ],
           ),
         ),
