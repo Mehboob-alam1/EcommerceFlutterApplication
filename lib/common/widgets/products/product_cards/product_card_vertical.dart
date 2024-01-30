@@ -19,7 +19,7 @@ class TProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -30,7 +30,7 @@ class TProductCardVertical extends StatelessWidget {
         child: Column(
           children: [
             /// Thumbnail , Wishlist button
-      
+
             TRoundedContainer(
               height: 180,
               padding: const EdgeInsets.all(TSizes.sm),
@@ -38,10 +38,10 @@ class TProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   ///Thumbnail Image
-      
+
                   const TRoundedImage(
                       imageUrl: TImages.productImage1, applyImageRadius: true),
-      
+
                   /// Sales Tag
                   Positioned(
                     top: 12,
@@ -57,18 +57,18 @@ class TProductCardVertical extends StatelessWidget {
                               .apply(color: TColor.black)),
                     ),
                   ),
-      
+
                   ///Favourite Button Icon
                   const Positioned(
                       right: 0,
-                      child:
-                          TCircularIcon(icon: Iconsax.heart5, color: Colors.red)),
+                      child: TCircularIcon(
+                          icon: Iconsax.heart5, color: Colors.red)),
                 ],
               ),
             ),
-      
+
             const SizedBox(height: TSizes.spaceBtwItems / 2),
-      
+
             ///Details
             Padding(
               padding: const EdgeInsets.only(left: TSizes.sm),
@@ -89,34 +89,39 @@ class TProductCardVertical extends StatelessWidget {
                           color: TColor.primary, size: TSizes.iconXs),
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ///Price
-                    const TProductPriceText(price: '35.0'),
-      
-                      Container(
-                        decoration: const BoxDecoration(
-                            color: TColor.dark,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(TSizes.cardRadiusMd),
-                              bottomRight:
-                                  Radius.circular(TSizes.productImageRadius),
-                            )),
-                        child: const SizedBox(
-                            width: TSizes.iconLg * 1.2,
-                            height: TSizes.iconLg * 1.2,
-                            child: Center(
-                              child: Icon(
-                                Iconsax.add,
-                                color: TColor.white,
-                              ),
-                            )),
-                      )
-                    ],
-                  )
+
+                  ///Price Row
                 ],
               ),
+            ),
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ///Price
+                const Padding(
+                  padding: EdgeInsets.only(left: TSizes.sm),
+                  child: TProductPriceText(price: '35.0'),
+                ),
+
+                Container(
+                  decoration: const BoxDecoration(
+                      color: TColor.dark,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(TSizes.cardRadiusMd),
+                        bottomRight: Radius.circular(TSizes.productImageRadius),
+                      )),
+                  child: const SizedBox(
+                      width: TSizes.iconLg * 1.2,
+                      height: TSizes.iconLg * 1.2,
+                      child: Center(
+                        child: Icon(
+                          Iconsax.add,
+                          color: TColor.white,
+                        ),
+                      )),
+                )
+              ],
             ),
           ],
         ),
