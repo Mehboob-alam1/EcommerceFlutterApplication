@@ -40,7 +40,7 @@ class TPromoSlider extends StatelessWidget {
             children: [
           
               for(int i=0;i<banners.length;i++)
-                 TCircularContainer(width: 20, height: 4, margin: const EdgeInsets.only(right: 10),backgroundColor:controller.carousalCurrentIndex.value==i? TColor.primary: TColor.grey),
+                 TCircularContainer(width: 20, height: 4, margin: const EdgeInsets.only(right: 10),backgroundColor:controller.carousalCurrentIndex.value==i? TColors.primary: TColors.grey),
           
             ],
           ),

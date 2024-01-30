@@ -34,10 +34,10 @@ class TTermsAndConditionsCheckBox extends StatelessWidget {
                   .textTheme
                   .bodyMedium!
                   .apply(
-                color: dark ? TColor.white : TColor.primary,
+                color: dark ? TColors.white : TColors.primary,
                 decoration: TextDecoration.underline,
                 decorationColor:
-                dark ? TColor.white : TColor.primary,
+                dark ? TColors.white : TColors.primary,
               )),
           TextSpan(
               text: '${TTexts.and} ',
@@ -48,10 +48,10 @@ class TTermsAndConditionsCheckBox extends StatelessWidget {
                   .textTheme
                   .bodyMedium!
                   .apply(
-                color: dark ? TColor.white : TColor.primary,
+                color: dark ? TColors.white : TColors.primary,
                 decoration: TextDecoration.underline,
                 decorationColor:
-                dark ? TColor.white : TColor.primary,
+                dark ? TColors.white : TColors.primary,
               )),
         ]))
       ],

@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../icons/t_circular_icon.dart';
+import '../../text/t_brand_title_text_with_verfied_icon.dart';
 
 class TProductCardVertical extends StatelessWidget {
   const TProductCardVertical({super.key});
@@ -26,7 +27,7 @@ class TProductCardVertical extends StatelessWidget {
         decoration: BoxDecoration(
             boxShadow: [TShadowStyle.verticalProductShadow],
             borderRadius: BorderRadius.circular(TSizes.productImageRadius),
-            color: dark ? TColor.darkerGrey : TColor.white),
+            color: dark ? TColors.darkerGrey : TColors.white),
         child: Column(
           children: [
             /// Thumbnail , Wishlist button
@@ -34,7 +35,7 @@ class TProductCardVertical extends StatelessWidget {
             TRoundedContainer(
               height: 180,
               padding: const EdgeInsets.all(TSizes.sm),
-              backgroundColor: dark ? TColor.dark : TColor.light,
+              backgroundColor: dark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [
                   ///Thumbnail Image
@@ -47,14 +48,14 @@ class TProductCardVertical extends StatelessWidget {
                     top: 12,
                     child: TRoundedContainer(
                       radius: TSizes.sm,
-                      backgroundColor: TColor.secondary.withOpacity(0.8),
+                      backgroundColor: TColors.secondary.withOpacity(0.8),
                       padding: const EdgeInsets.symmetric(
                           horizontal: TSizes.sm, vertical: TSizes.xs),
                       child: Text('25%',
                           style: Theme.of(context)
                               .textTheme
                               .labelLarge!
-                              .apply(color: TColor.black)),
+                              .apply(color: TColors.black)),
                     ),
                   ),
 
@@ -70,25 +71,15 @@ class TProductCardVertical extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwItems / 2),
 
             ///Details
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const TProductTitleText(
+                  TProductTitleText(
                       title: 'Green Nike Air Shoes', smallSize: true),
-                  const SizedBox(height: TSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text('Nike',
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                          style: Theme.of(context).textTheme.labelMedium),
-                      const SizedBox(width: TSizes.xs),
-                      const Icon(Iconsax.verify5,
-                          color: TColor.primary, size: TSizes.iconXs),
-                    ],
-                  ),
+                  SizedBox(height: TSizes.spaceBtwItems / 2),
+                  TBrandTitleWithVerifiedIcon(title: 'Nike'),
 
                   ///Price Row
                 ],
@@ -106,7 +97,7 @@ class TProductCardVertical extends StatelessWidget {
 
                 Container(
                   decoration: const BoxDecoration(
-                      color: TColor.dark,
+                      color: TColors.dark,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(TSizes.cardRadiusMd),
                         bottomRight: Radius.circular(TSizes.productImageRadius),
@@ -117,7 +108,7 @@ class TProductCardVertical extends StatelessWidget {
                       child: Center(
                         child: Icon(
                           Iconsax.add,
-                          color: TColor.white,
+                          color: TColors.white,
                         ),
                       )),
                 )
@@ -129,3 +120,5 @@ class TProductCardVertical extends StatelessWidget {
     );
   }
 }
+
+

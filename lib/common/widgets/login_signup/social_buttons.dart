@@ -16,7 +16,7 @@ class TSocialButtons extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-              border: Border.all(color: TColor.grey),
+              border: Border.all(color: TColors.grey),
               borderRadius: BorderRadius.circular(100)),
           child: IconButton(
             onPressed: () {},
@@ -30,7 +30,7 @@ class TSocialButtons extends StatelessWidget {
         const SizedBox(width: TSizes.spaceBtwItems),
         Container(
           decoration: BoxDecoration(
-              border: Border.all(color: TColor.grey),
+              border: Border.all(color: TColors.grey),
               borderRadius: BorderRadius.circular(100)),
           child: IconButton(
             onPressed: () {},
