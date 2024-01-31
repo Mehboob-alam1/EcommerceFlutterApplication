@@ -12,7 +12,7 @@ class TVerticalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor =TColors.white,
-    this.backGroundColor=TColors.white,
+    this.backGroundColor,
     this.onTap,
   });
 
