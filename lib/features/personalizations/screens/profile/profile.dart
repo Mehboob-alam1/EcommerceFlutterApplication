@@ -43,6 +43,7 @@ class ProfileScreen extends StatelessWidget {
               const Divider(),
               const SizedBox(height: TSizes.spaceBtwItems),
 
+
               /// Heading Profile Info
               const TSectionHeading(title: 'Profile Information',showActionButton: false),
               const SizedBox(height: TSizes.spaceBtwItems),
