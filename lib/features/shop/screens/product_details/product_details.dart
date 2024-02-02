@@ -4,8 +4,10 @@ import 'package:ecommerce/features/shop/screens/product_details/widgets/product_
 import 'package:ecommerce/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:ecommerce/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:ecommerce/features/shop/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:ecommerce/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 
@@ -16,40 +18,40 @@ class ProductDetails extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return   Scaffold(
-      bottomNavigationBar: TBottomAddToCart(),
+      bottomNavigationBar: const TBottomAddToCart(),
       body: SingleChildScrollView(
         child: Column(
           children: [
 
             /// 1- Product Image Slider
 
-            TProductImageSlider(),
+            const TProductImageSlider(),
 
             /// 2- Product Details
 
             Padding(
-                padding: EdgeInsets.only(right: TSizes.defaultSpace, left: TSizes.defaultSpace, bottom: TSizes.defaultSpace),
+                padding: const EdgeInsets.only(right: TSizes.defaultSpace, left: TSizes.defaultSpace, bottom: TSizes.defaultSpace),
                child: Column(
                  children: [
                    /// Rating & sharing
 
-                   TRatingAndShare(),
+                   const TRatingAndShare(),
                    /// Price title stock and brand
-                   TProductMetaData(),
+                   const TProductMetaData(),
                    /// Attributes
-                   ProductAttributes(),
+                   const ProductAttributes(),
 
 
-                   SizedBox(height: TSizes.spaceBtwSections),
+                   const SizedBox(height: TSizes.spaceBtwSections),
                    /// Checkout Button
-                  SizedBox(width: double.infinity,child: ElevatedButton(onPressed: (){}, child: Text('Checkout'))),
-                   SizedBox(height: TSizes.spaceBtwSections),
+                  SizedBox(width: double.infinity,child: ElevatedButton(onPressed: (){}, child: const Text('Checkout'))),
+                   const SizedBox(height: TSizes.spaceBtwSections),
 
                    /// Description
-                   TSectionHeading(title: 'Description',showActionButton: false),
-                   SizedBox(height: TSizes.spaceBtwItems),
+                   const TSectionHeading(title: 'Description',showActionButton: false),
+                   const SizedBox(height: TSizes.spaceBtwItems),
 
-                   ReadMoreText(
+                   const ReadMoreText(
                      'This is a product description for blue Nike Sleeve less vest. There are more things that can be addded to this decription as i want to check this widget if its working or not so let\'s test it out...',
                      trimLines: 2,
                      trimMode: TrimMode.Line,
@@ -61,16 +63,16 @@ class ProductDetails extends StatelessWidget {
                    ),
                   
                    /// Reviews
-                   Divider(),
-                   SizedBox(height: TSizes.spaceBtwItems),
+                   const Divider(),
+                   const SizedBox(height: TSizes.spaceBtwItems),
                    Row(
                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                      children: [
-                       TSectionHeading(title: 'Reviews(199)',showActionButton: false),
-                       IconButton(onPressed: (){}, icon: Icon(Iconsax.arrow_right_3,size: 18)),
+                       const TSectionHeading(title: 'Reviews(199)',showActionButton: false),
+                       IconButton(onPressed: ()=>Get.to(()=>const ProductReviewsScreen()), icon: const Icon(Iconsax.arrow_right_3,size: 18)),
                      ],
                    ),
-                   SizedBox(height: TSizes.spaceBtwSections),
+                   const SizedBox(height: TSizes.spaceBtwSections),
 
                  ],
                ),
