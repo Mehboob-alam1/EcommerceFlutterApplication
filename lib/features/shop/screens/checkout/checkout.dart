@@ -11,7 +11,6 @@ import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../../../common/widgets/appbar/appbar.dart';
 import '../../../../common/widgets/products/cart/coupon_widget.dart';
@@ -45,9 +44,9 @@ class CheckOutScreen extends StatelessWidget {
 
               TRoundedContainer(
                 showBorder: true,
-                padding: EdgeInsets.all(TSizes.md),
+                padding: const EdgeInsets.all(TSizes.md),
                 backgroundColor: dark ? TColors.black : TColors.white,
-                child: Column(
+                child: const Column(
                   children: [
                     /// Pricing
                     TBillingAmountSection(),

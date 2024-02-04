@@ -1,4 +1,3 @@
-import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,7 @@ class TBillingAddressSection extends StatelessWidget {
 
         Row(
           children: [
-            Icon(Icons.phone,color: Colors.grey,size: 16),
+            const Icon(Icons.phone,color: Colors.grey,size: 16),
             const SizedBox(width: TSizes.spaceBtwItems),
             Text('+92 317 1981460',style: Theme.of(context).textTheme.bodyMedium),
           ],
@@ -26,7 +25,7 @@ class TBillingAddressSection extends StatelessWidget {
         const SizedBox(height: TSizes.spaceBtwItems / 2),
         Row(
           children: [
-            Icon(Icons.location_history,color: Colors.grey,size: 16),
+            const Icon(Icons.location_history,color: Colors.grey,size: 16),
             const SizedBox(width: TSizes.spaceBtwItems),
             Text('South Liana, Maine 87695, USA',style: Theme.of(context).textTheme.bodyMedium),
           ],
