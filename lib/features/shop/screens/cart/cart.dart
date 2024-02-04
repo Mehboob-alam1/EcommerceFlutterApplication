@@ -1,14 +1,10 @@
 import 'package:ecommerce/common/widgets/appbar/appbar.dart';
-import 'package:ecommerce/common/widgets/icons/t_circular_icon.dart';
-import 'package:ecommerce/common/widgets/text/product_price_text.dart';
-import 'package:ecommerce/utils/constants/colors.dart';
+import 'package:ecommerce/features/shop/screens/cart/widgets/cart_items.dart';
+import 'package:ecommerce/features/shop/screens/checkout/checkout.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
-import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:get/get.dart';
 
-import '../../../../common/widgets/products/cart/add_remove_button.dart';
-import '../../../../common/widgets/products/cart/cart_item.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -20,50 +16,24 @@ class CartScreen extends StatelessWidget {
           showBackArrow: true,
           title:
               Text('Cart', style: Theme.of(context).textTheme.headlineSmall)),
-      body: Padding(
-        padding: const EdgeInsets.all(TSizes.defaultSpace),
-        child: ListView.separated(
-          shrinkWrap: true,
-          separatorBuilder: (_, __) =>
-              const SizedBox(height: TSizes.spaceBtwSections),
-          itemCount: 12,
-          itemBuilder: (_, index) => const Column(
-            children: [
-              TCartItem(),
-              SizedBox(height: TSizes.spaceBtwItems),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+      body: const Padding(
+        padding: EdgeInsets.all(TSizes.defaultSpace),
 
-                  Row(
-                    children: [
-                      /// Extra Space
-                      SizedBox(width: 70),
-
-                      /// Add Remove Buttons
-                      TProductQuantityWithAddRemoveButton(),
-                    ],
-                  ),
-
-
-
-                  TProductPriceText(price: '256')
-                ],
-              )
-            ],
-          ),
-        ),
+        /// Items in cart
+        child: TCartItems(),
       ),
 
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.all(TSizes.defaultSpace),
+        padding: const EdgeInsets.all(TSizes.defaultSpace),
         child: ElevatedButton(
-          onPressed: (){},
-          child: Text('Checkout \$ 256'),
+          onPressed: ()=>Get.to(()=>const CheckOutScreen()),
+          child: const Text('Checkout \$ 256'),
         ),
       ),
     );
   }
 }
+
+
 
 

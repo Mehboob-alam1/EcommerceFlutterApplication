@@ -35,12 +35,15 @@ class TCartItem extends StatelessWidget {
               const TBrandTitleWithVerifiedIcon(title: 'Nike'),
               const Flexible(child: TBrandTitleText(title: 'Black Sports Shoes ',maxLines: 1)),
               Text.rich(
+
                   TextSpan(
+
                       children: [
-                        TextSpan(text: 'Color',style: Theme.of(context).textTheme.bodySmall),
-                        TextSpan(text: 'Green',style: Theme.of(context).textTheme.bodyLarge),
-                        TextSpan(text: 'Size',style: Theme.of(context).textTheme.bodySmall),
-                        TextSpan(text: 'UK 08',style: Theme.of(context).textTheme.bodyLarge),
+                        TextSpan(text: 'Color ',style: Theme.of(context).textTheme.bodySmall),
+
+                        TextSpan(text: 'Green ',style: Theme.of(context).textTheme.bodyLarge),
+                        TextSpan(text: 'Size ',style: Theme.of(context).textTheme.bodySmall),
+                        TextSpan(text: 'UK 08 ',style: Theme.of(context).textTheme.bodyLarge),
                       ]
                   )
               )
